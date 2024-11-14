@@ -1,15 +1,15 @@
 @host=http://localhost:3000
 
-### GET /books
+### GET /employees
 GET {{host}}/employees
 
-### Get existing book
+### Get existing employee
 GET {{host}}/employees/3
 
-### Get nonexistent book
+### Get nonexistent employee
 GET {{host}}/employees/18
 
-### Add a new book
+### Add a new employee
 POST {{host}}/employees/
 Content-Type: application/json
 
@@ -17,7 +17,7 @@ Content-Type: application/json
   "name": "New Employee"
 }
 
-### Incorrectly a new book
+### Incorrectly a new employee
 POST {{host}}/employees/
 Content-Type: application/json
 
@@ -25,7 +25,7 @@ Content-Type: application/json
   "nam": "Wrong New Employee"
 }
 
-### Update book
+### Update employee
 PUT {{host}}/employees/3
 Content-Type: application/json
 
@@ -33,7 +33,7 @@ Content-Type: application/json
   "name": "Updated Employee"
 }
 
-### Update nonexistent book
+### Update nonexistent employee
 PUT {{host}}/employees/18
 Content-Type: application/json
 
@@ -41,7 +41,7 @@ Content-Type: application/json
   "name": "Wrong Updated Employee"
 }
 
-### Incorrectly update book
+### Incorrectly update employee
 PUT {{host}}/employees/3
 Content-Type: application/json
 
@@ -49,8 +49,8 @@ Content-Type: application/json
   "nam": "Wrong Updated Employee"
 }
 
-### Delete existing book
+### Delete existing employee
 DELETE {{host}}/employees/9
 
-### Delete nonexistent book
+### Delete nonexistent employee
 DELETE {{host}}/employees/18
