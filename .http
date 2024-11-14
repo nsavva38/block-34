@@ -1,56 +1,56 @@
 @host=http://localhost:3000
 
 ### GET /books
-GET {{host}}/books
+GET {{host}}/employees
 
 ### Get existing book
-GET {{host}}/books/3
+GET {{host}}/employees/3
 
 ### Get nonexistent book
-GET {{host}}/books/18
+GET {{host}}/employees/18
 
 ### Add a new book
-POST {{host}}/books/
+POST {{host}}/employees/
 Content-Type: application/json
 
 {
-  "title": "New Book"
+  "name": "New Employee"
 }
 
 ### Incorrectly a new book
-POST {{host}}/books/
+POST {{host}}/employees/
 Content-Type: application/json
 
 {
-  "titl": "Wrong New Book"
+  "nam": "Wrong New Employee"
 }
 
 ### Update book
-PUT {{host}}/books/3
+PUT {{host}}/employees/3
 Content-Type: application/json
 
 {
-  "title": "Updated Book"
+  "name": "Updated Employee"
 }
 
 ### Update nonexistent book
-PUT {{host}}/books/18
+PUT {{host}}/employees/18
 Content-Type: application/json
 
 {
-  "title": "Wrong Updated Book"
+  "name": "Wrong Updated Employee"
 }
 
 ### Incorrectly update book
-PUT {{host}}/books/3
+PUT {{host}}/employees/3
 Content-Type: application/json
 
 {
-  "tile": "Wrong Updated Book"
+  "nam": "Wrong Updated Employee"
 }
 
 ### Delete existing book
-DELETE {{host}}/books/9
+DELETE {{host}}/employees/9
 
 ### Delete nonexistent book
-DELETE {{host}}/books/18
+DELETE {{host}}/employees/18
